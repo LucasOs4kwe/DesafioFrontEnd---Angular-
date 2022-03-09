@@ -1,0 +1,97 @@
+colors {
+    --bg-color-black: rgb(26, 25, 25);
+    --bg-color-orange: rgb(199, 122, 6);
+    --bg-color-body: rgb(53, 54, 55);
+}
+
+.header {
+    background-color: rgb(26, 25, 25);
+    width: 79%;
+    border-radius: 0 0 0 10px;
+}
+
+#header_logo {
+    width: 20%;
+    background-color: rgb(199, 122, 6);
+    display: flex;
+    border-radius: 0 0 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#initial {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+ul{
+    list-style: none;
+}
+.nav-bar{
+    height: 100%;
+}
+.nav-list{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.nav-item{
+    color: white;
+}
+.nav-item a{
+    cursor: pointer;
+    color: white;
+}
+.spn_white{
+    color: white;
+}
+.spn_nameLogo{
+    font-size: 30px;
+    font-weight: 600;
+}
+.active{
+    border-bottom: 3px solid rgb(199, 122, 6);
+    border-radius: 3px;
+}
+.social-icons{
+    background-color: rgb(199, 122, 6);
+    width: 170px;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social-icons a{
+    color: rgb(26, 25, 25);
+}
+.social-icons .fa-brands, .fa-solid{
+    font-size: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.social-icons .fa-brands:hover, .fa-solid:hover{
+    transform: scale(1.1,1.1);
+    color: white;
+}
+
+.footer{
+    background-color: rgb(36, 35, 35);
+    height: 20vh;
+    user-select: none;
+    border-radius: 70% 70% 0 0;
+    margin-top: 10vh;
+}
+#footer-authorName{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#footer-authorName span{
+    color: white;
+    font-size: 20px;
+}

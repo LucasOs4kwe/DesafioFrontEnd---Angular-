@@ -1,0 +1,226 @@
+#ativos-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 5vh 5vh;
+}
+
+.box-ativos {
+  width: 500px;
+  height: 240px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 12px;
+  margin: 50px;
+  transition: 0.7s;
+}
+
+.box-ativos:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 0 2vh 1vw;
+}
+
+.active-title {
+  width: fit-content;
+  user-select: none;
+}
+
+.active-name {
+  font-size: 30px;
+}
+
+.active-corpName {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.price-variation-box {
+  background-color: rgb(36, 35, 35);
+  width: 30%;
+  height: 5vh;
+  border-radius: 15px 0px 0px 15px;
+  user-select: none;
+}
+
+.pv-data {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+}
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+  padding: 0 0.5vw 0 0.5vw;
+}
+
+.corp-logo img {
+  max-width: 35px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70px;
+  height: 100%;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.neutral {
+  color: white;
+}
+
+.fa-solid .fa-heart {}
+
+
+@keyframes fav_animation {
+  from {
+    transform: scale(1.5, 1.5);
+    cursor: none;
+  }
+
+  to {
+    transform: scale(1.0, 1.0);
+    cursor: auto;
+  }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: rgb(197, 197, 197);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 15px;
+  animation: modal_in 700ms forwards;
+  user-select: none;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ALTERAÇÕES */
+
+#box_content-modal {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+#modal_content_header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal_content_header span {
+  display: block;
+}
+
+
+.stock_modal {
+  font-size: 50px;
+}
+
+.company_modal {
+  font-size: 25px;
+}
+
+.center-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+#price_variation-modal {
+  font-size: 25px;
+}
+
+#footer-buttons{
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+#footer-buttons i{
+  font-size: 25px;
+}
+#footer-buttons a{
+  color: black;
+  transition: 0.7s;
+}
+#footer-buttons a:hover{
+  color: rgb(199, 122, 6);
+}
+
+#right-header img{
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes modal_in {
+  from {
+    transform: translateY(-10vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

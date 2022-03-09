@@ -1,0 +1,87 @@
+<app-filter-bar></app-filter-bar>
+
+<div id="ativos-section">
+    <span *ngFor="let ativosmodel of stocks; let i = index">
+        <div class="box-ativos">
+            <div class="box-header">
+                <div class="active-title">
+                    <span class="active-name">{{ativosmodel.stock}}</span>
+                    <span class="active-corpName">{{ativosmodel.company}}</span>
+                </div>
+                <div class="price-variation-box">
+                    <div class="pv-data">
+                        <span class="price">{{ativosmodel.price}}</span>
+                        <span>|</span>
+                        <span class="variation"
+                            [ngClass]="{'red': ativosmodel.variation < 0, 'green': ativosmodel.variation > 0, 'neutral': ativosmodel.variation == 0}">
+                            {{ativosmodel.variation}}
+                            <span>%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph">
+                <app-chart [idChart]="i"></app-chart>
+            </div>
+            <div class="footer-box">
+                <div class="corp-logo">
+                    <img src="{{ativosmodel.img}}" alt="">
+                </div>
+
+                <div class="buttons">
+
+                    <span *ngIf="ativosmodel.Favlike == false; else btn_liked">
+                        <i class="far fa-heart" id="btn_{{i}}" (click)="FavButton(i)"></i>
+                    </span>
+
+                    <ng-template #btn_liked>
+                        <i class="fa-solid fa-heart" id="btn_{{i}}" (click)="FavButton(i)"></i>
+                    </ng-template>
+
+                    <i class="fa-solid fa-circle-info" (click)="modalBox(i)"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal_{{i}}" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="close_{{i}}" class="close">&times;</span>
+
+                <div id="box_content-modal">
+                    <div id="modal_content_header">
+                        <div id="left-header">
+                            <span class="stock_modal">{{ativosmodel.stock}}</span>
+                            <span class="company_modal">{{ativosmodel.company}}</span>
+                        </div>
+                        <div id="right-header">
+                            <img src="{{ativosmodel.img_country}}" alt="">
+                            <img src="{{ativosmodel.img_color}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="center-content">
+                        <div id="price_variation-modal">
+                            <span>{{ativosmodel.price}}</span>
+                            <span>|</span>
+                            <span [ngClass]="{'red': ativosmodel.variation < 0, 'green': ativosmodel.variation > 0, 'neutral': ativosmodel.variation == 0}">
+                                {{ativosmodel.variation}}%
+                            </span>
+                        </div>
+    
+                        <div id="footer-buttons">
+                            <a href=""><i class="fa-solid fa-earth-americas"></i></a>
+                            <a href=""><i class="fa-solid fa-pencil"></i></a>
+                        </div>
+                    </div>
+                    
+                    <p></p>
+                </div>
+
+            </div>
+
+        </div>
+    </span>
+</div>

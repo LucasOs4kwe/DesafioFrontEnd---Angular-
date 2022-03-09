@@ -1,0 +1,26 @@
+<div id="filterbar-container">
+    <div id="filterbar">
+        <div id="select-filterbar">
+            <span>Ordenar por: </span>
+            <select name="" id="filter_slct">
+                <option value="0" selected disabled></option>
+                <option value="1">Preço</option>
+                <option value="2">Variação</option>
+            </select>
+        </div>
+
+        <div id="radio-inputs-filterbar">
+            <input type="radio" name="pv" value="op1" class="input_radio">Maior
+            <input type="radio" name="pv" value="op2" class="input_radio">Menor
+        </div>
+
+        <div id="filter_btn_box">
+            <a (click)="order()"><i class="fa-solid fa-filter"></i>Filtrar</a>
+        </div>
+
+        <div id="filterbar-clear">
+            <span>Limpar filtros</span>
+            <i class="fas fa-times" (click)="clearFilter();"></i>
+        </div>
+    </div>
+</div>
